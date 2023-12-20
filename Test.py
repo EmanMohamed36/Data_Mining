@@ -93,7 +93,7 @@ def calculate_performance(y_test, y_pred):
 if __name__ == '__main__':
     file_path = 'testDM.csv'
     df = load_csv(file_path)
-    df=df.replace([np.inf, -np.inf], np.nan).dropna()
+    df=df.replace([np.inf, -np.inf, 'unknown'], np.nan).dropna()
 
     x,y=df.shape
 
